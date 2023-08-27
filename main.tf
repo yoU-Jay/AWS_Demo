@@ -20,8 +20,8 @@ resource "aws_security_group" "ec2_security_group" {
 
   ingress {
     description = "http access"
-    from_port   = 8080
-    to_port     = 8080
+    from_port   = 8090
+    to_port     = 8090
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -50,7 +50,7 @@ resource "aws_instance" "ec2_instance" {
   instance_type          = var.instance_type
   subnet_id              = aws_default_subnet.default_az1.id
   vpc_security_group_ids = [aws_security_group.ec2_security_group.id]
-  user_data              = file("install_nginx.sh")
+  user_data              = file("install_tomcat.sh")
 
   tags = {
     Name = var.instance_name
