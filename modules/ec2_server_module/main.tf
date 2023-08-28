@@ -14,7 +14,7 @@ resource "aws_instance" "ec2_instance" {
 
 resource "aws_security_group" "ec2_security_group" {
   name        = "ec2 security group"
-  description = "allow access on ports 80 and 22"
+  description = "allow access on ports 8090 and 22"
   vpc_id      = var.vpc_id
 
   ingress {
@@ -30,7 +30,7 @@ resource "aws_security_group" "ec2_security_group" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = [var.my_public_ip]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {

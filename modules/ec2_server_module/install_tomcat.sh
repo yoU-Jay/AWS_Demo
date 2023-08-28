@@ -32,4 +32,20 @@ ln -s /opt/apache-tomcat-${VERSION}/bin/shutdown.sh /usr/local/bin/tomcatdown
 
 # Change tomcat default port number
 sed -i 's/Connector port="8080"/Connector port="8090"/g' /opt/apache-tomcat-${VERSION}/conf/server.xml
+
+#Modify Exisiting tomcat page with static website
+cd /opt/apache-tomcat-${VERSION}/webapps/ROOT
+cat << EOF > index.jsp
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Server Hello World: Static Website</title>
+  </head>
+  <body>
+    <h1>Hello DevOpsNxt! I am Ujwal</h1>
+    <p>.</p>
+  </body>
+</html>
+EOF
+
 tomcatup
