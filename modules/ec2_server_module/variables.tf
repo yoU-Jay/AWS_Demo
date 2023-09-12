@@ -26,4 +26,5 @@ variable "subnet_id" {}
 variable "my_public_ip" {
   description = "public ip cidr"
   type        = string
+  default = "0.0.0.0/0"
 }

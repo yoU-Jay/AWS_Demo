@@ -42,7 +42,7 @@ cat << EOF > index.jsp
     <title>Server Hello World: Static Website</title>
   </head>
   <body>
-    <h1>Hello DevOpsNxt! I am Ujwal</h1>
+    <h1>Hello DevOpsNxt!</h1>
     <p>.</p>
   </body>
 </html>
