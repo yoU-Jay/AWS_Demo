@@ -1,7 +1,7 @@
 resource "aws_security_group" "alb" {
   name        = "terraform_alb_security_group"
   description = "Terraform ALB security group"
-  vpc_id      = module.network_module.aws_vpc
+  vpc_id      = var.vpc_id
 
   ingress {
     from_port   = 80

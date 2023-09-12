@@ -11,6 +11,11 @@ module "ec2_server_module" {
   instance_name = var.instance_name
 }
 
+module "alb_module" {
+  source = "./modules/alb_module"
+  vpc_id = module.network_module.aws_vpc
+}
+
 module "alb" {
   source  = "terraform-aws-modules/alb/aws"
   version = "~> 8.0"
@@ -21,7 +26,7 @@ module "alb" {
 
   vpc_id          = module.network_module.aws_vpc
   subnets         = ["subnet-0f1d27873c4699ff3", "subnet-0813388e5a895137a"]
-  security_groups = [aws_security_group.alb.id]
+  security_groups = [module.alb_module.aws_security_group]
 
   target_groups = [
     {
