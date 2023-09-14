@@ -53,3 +53,21 @@ aws iam attach-user-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAcc
 
 * Setup `user.name` and `user.email` at local level using `git configure --local`
 * To setup Github authentication using PAT. `git remote set-url origin https://<your_personal_access_token>@github.com/<username>/<repo_name>.git`
+
+# Azure DevOps Pipelines
+### Prerequisites
+* Existing ADO Project with required permissions.
+* Service connections for S3 and Github.
+* configured agent
+* Installed terraform extention in ADO
+
+### Deployment
+* Create a `+ New` pipeline in releases.
+* Start with an `Empty job`.
+* In `+ Add and artifact`, Select `Source type` as `Github`.
+* Under `Service` choose the *service connection name* created for Github and under `Source (repository)` select the required repository.
+* Click on `Add`.
+* In Stage 1, click on `1 job, 0 task` to configure the stage.
+* Configure the `Agent job`
+* Select the Agent from the Agent Pool
+* Create 4 terraform tasks
