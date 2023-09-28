@@ -1,6 +1,9 @@
 # AWS_Terraform_Demo
 ![Terraform](https://img.shields.io/badge/-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white) ![AWS](https://img.shields.io/badge/-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Shell Script](https://img.shields.io/badge/-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) 
 
+##### This is a demo repo to demonstrate skills of DevOps tools like AWS, Terraform, Azure DevOps pipelines (and many more to come..).  
+*🚧Work in Progress..🚧*  
+
 | Build Pipeline | Release Pipeline |
 | ---- | ---- |
 | [![Build Status](https://dev.azure.com/DevOpsNxt961/Nxt/_apis/build/status%2FNxt-CI?branchName=basic_ec2)](https://dev.azure.com/DevOpsNxt961/Nxt/_build/latest?definitionId=1&branchName=basic_ec2) | [![Azure DevOps Release Pipeline](https://vsrm.dev.azure.com/DevOpsNxt961/_apis/public/Release/badge/9adb4fbe-b74d-4b2b-b048-09612ac8de25/1/1?api-version=6.0)](https://dev.azure.com/DevOpsNxt961/Nxt/_release?definitionId=9adb4fbe-b74d-4b2b-b048-09612ac8de25&_a=releases) |
